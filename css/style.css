@@ -1,0 +1,209 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  background-image: url(../images/bg.png);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#topWrapper {
+  text-align: center;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+}
+
+#topnav li {
+  display: inline-block;
+  padding: 20px;
+  font: bold 14px Tahoma;
+  color: white;
+}
+
+#rightWrapper {
+  top: 2%;
+  text-align: right;
+  position: fixed;
+  width: 850px;
+  margin: 0 auto;
+  left: 500px;
+  right: 0px;
+  float: clear;
+}
+
+#toprightnav li {
+  display: inline-block;
+  list-style: none;
+  padding: 20px;
+  font: bold 14px Tahoma;
+  color: white;
+}
+
+.button {
+  background-color: #ffd232;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  cursor: pointer;
+  font: bold 14px Tahoma;
+}
+
+.arrowbutton {
+  height: 70px;
+  background-color: #ffd232;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  cursor: pointer;
+  font: bold 14px Tahoma;
+  border-radius: 10px;
+}
+
+select {
+  border: 0px;
+  outline: 0px;
+  background-color: transparent;
+  font: bold 14px Tahoma;
+  color: white;
+}
+
+.select {
+  border: 0px;
+  outline: 0px;
+  background-color: transparent;
+  font: 14px Tahoma;
+  color: #8b949a;
+}
+.h1 {
+  font: 40px Tahoma;
+  color: white;
+  position: relative;
+  width: 50%;
+  bottom: -170px;
+  padding: 0px 30px;
+}
+.h2 {
+  font: bold 40px Tahoma;
+  color: #ffd232;
+  position: relative;
+  width: 50%;
+  bottom: -140px;
+  padding: 0px 30px;
+}
+
+.cointainer {
+  position: relative;
+  width: 50%;
+  bottom: -170px;
+  padding: 0px 30px;
+}
+
+.tab {
+  overflow: hidden;
+  background-color: #ffd232;
+  width: 500px;
+}
+
+.tab button {
+  width: 150px;
+  height: 50px;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 20px 25px;
+  transition: 0.3s;
+  font: bold 12px Tahoma;
+}
+
+.tab button.active {
+  background-color: #ffffff;
+}
+
+.tabcontent {
+  width: 1000px;
+  height: 200px;
+  background-color: white;
+  padding: 16px 12px;
+  border-top: none;
+  border-radius: 0px 0px 30px 30px;
+}
+
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.form-inline label {
+  font: 12px Tahoma;
+  color: #8b949a;
+  margin: 5px 5px 5px 0;
+  float: left;
+}
+
+.form-inline input {
+  width: 150px;
+  height: 50px;
+  border-radius: 10px 10px 10px 10px;
+  color: #bab4be;
+  font: 12px Tahoma;
+  vertical-align: middle;
+  margin: 5px 10px 5px 0px;
+  padding: 10px;
+  background-color: #eeeeee;
+  border: 1px solid #eeeeee;
+}
+
+table {
+  border-spacing: 10px;
+  margin: 20px 0px 0px 0px;
+  border-collapse: collapse;
+}
+table td {
+  border: 0px solid #cccccc;
+}
+td {
+  color: #bab4be;
+  width: 100px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+input {
+  position: relative;
+  color: white;
+}
+
+input:before {
+  text-align: center;
+  top: 3px;
+  left: 3px;
+  content: attr(data-date);
+  display: inline-block;
+  color: #8b949a;
+}
+
+input::-webkit-datetime-edit,
+input::-webkit-inner-spin-button,
+input::-webkit-clear-button {
+  display: none;
+}
+
+input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  text-align: center;
+  top: 25px;
+  right: 10px;
+  color: #bab4be;
+  opacity: 1;
+}

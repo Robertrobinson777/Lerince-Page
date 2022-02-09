@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>American Airlines Group</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">            
+
+  </head>
+  <body>
+    <div class="bg">
+      <div id="topWrapper">
+        <nav id="topnav">
+          <ul>
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>Vacation Rentails</li></a>
+            <a href="#"><li>Vacation Packaged</li></a>
+            <a href="#"><li>Hotels</li></a>
+          </ul>
+        </nav>
+      </div>
+      <div id="rightWrapper">
+        <div id="toprightnav">
+          <select>
+            <option>English</option>
+            <option></option></select
+          ><a href="#"><li>Register</li></a>
+          <button class="button">Sign In</button>
+        </div>
+      </div>
+      <br />
+      <div>
+        <p class="h1">Find the best flights for the</p>
+        <p class="h2">Amazing Places</p>
+      </div>
+    
+<div class="cointainer">
+<div class="tab">
+  <button id="defaultOpen" class="tablinks" onclick="onClick(event, 'flight')">Flight</button>
+  <button class="tablinks">Hotel</button>
+  <button class="tablinks">Vacations</button>
+</div>
+
+<div id="flight" class="tabcontent">
+  <select class="select" >
+    <option>Round Trip</option>
+    <option></option></select
+  >
+  <select class="select" >
+    <option>Traveller</option>
+    <option></option></select
+  >
+  <select class="select" >
+    <option>Economy</option>
+    <option></option></select
+  >
+  <br>
+  <br>
+
+  <form class="form-inline">
+  <table >
+    <tr>
+      <td><label for="from">FROM</label></td>
+      <td><label for="to">TO</label></td>
+      <td><label for="to">TO</label></td>
+      <td><label for="to">RETURN</label></td>
+    </tr>
+    <tr>
+      <td><input type="from" id="from" placeholder="From" name="from"></td>
+      <td><input type="to" id="to" placeholder="To" name="to"></td>
+      <td><input type="date" id="todate"  data-date="" data-date-format="DD MMMM YYYY" value="2022-01-19"></td>
+      <td><input type="date" id="returndate"  data-date=""  data-date-format="DD MMMM YYYY" value="2022-01-19"  name="return">
+      </td>
+      <td><button class="arrowbutton"><i style='font-size:20px' class='fas'>&#xf061;</i>
+      </button></td>
+    </tr>
+  </table>
+</form>
+
+  </div>
+
+</div>
+    <script>
+      function onClick(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      document.getElementById("defaultOpen").click();
+     
+      $("#todate").on("change", function() {
+    this.setAttribute(
+        "data-date",
+        moment(this.value, "YYYY-MM-DD")
+        .format( this.getAttribute("data-date-format") )
+    )
+}).trigger("change")
+
+$("#returndate").on("change", function() {
+    this.setAttribute(
+        "data-date",
+        moment(this.value, "YYYY-MM-DD")
+        .format( this.getAttribute("data-date-format") )
+    )
+}).trigger("change")
+
+    </script>
+  </body>
+</html>
